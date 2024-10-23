@@ -12,6 +12,11 @@ body {
     font-style: normal;
 }
 
+
+.min {
+    font-size: 11px;
+}
+
 .white {
     color: var(--color-white);
 }

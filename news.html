@@ -6,9 +6,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <title>base</title>
+        <title>Новости</title>
+
+        <link rel="stylesheet" href="editor/sceditor/themes/defaultdark.css">
+
         <link rel="stylesheet" href="css/lib/colors.css">
         <link rel="stylesheet" href="css/lib/typographics.css">
+
+        <link rel="stylesheet" href="css/pages/news.css">
 
         <link rel="stylesheet" href="css/src/global.css">
     </head>
@@ -24,7 +29,7 @@
                 <h1 class="h1 white"><a href="index.html">8.5 CLASS</a></h1>
             </div>
             <div class="under__header">
-                <span class="white"><a href="index.html">Главная страница</a></span>
+                <span class="white"><a href="index.html">Главная страница</a> >> <a href="news.html">Новости</a></span>
             </div>
         </header>
         <main class="main">
@@ -67,7 +72,51 @@
                 </div>
             </div>
             <section class="content">
-                
+                <div class="news">
+                    <div class="editor__news">
+                        <textarea class="hide" name="edtor" id="" cols="120" rows="20" ></textarea>
+                    </div>
+                    <details class="news__item">
+                        <summary>
+                            <span class="title__details">ПРИМЕР НОВОСТИ</span>
+                        </summary>
+                            <p class="content__news">Описание новости</p>
+                            <p class="content__news">Описание новости</p>
+                            <p class="date__news">15.10.2024</p>
+                    </details>
+                    <details class="news__item">
+                        <summary>
+                            <span class="title__details">ПИЦЦА ПОДОРОЖАЛА НА 50%!!!</span>
+                        </summary>
+                            <p class="content__news">Каким-то неизвестным способом пицца стала стоить в 2 раза больше!</p>
+                            <p class="content__news">В данный момент её цена 80 рублей</p>
+                            <p class="date__news">15.09.2024</p>
+                    </details>
+                    <details class="news__item">
+                        <summary>
+                            <span class="title__details">ПИЦЦА ПОДОРОЖАЛА НА 50%!!!</span>
+                        </summary>
+                            <p class="content__news">Каким-то неизвестным способом пицца стала стоить в 2 раза больше!</p>
+                            <p class="content__news">В данный момент её цена 80 рублей</p>
+                            <p class="date__news">15.09.2024</p>
+                    </details>
+                    <details class="news__item">
+                        <summary>
+                            <span class="title__details">ПИЦЦА ПОДОРОЖАЛА НА 50%!!!</span>
+                        </summary>
+                            <p class="content__news">Каким-то неизвестным способом пицца стала стоить в 2 раза больше!</p>
+                            <p class="content__news">В данный момент её цена 80 рублей</p>
+                            <p class="date__news">15.09.2024</p>
+                    </details>
+                    <details class="news__item">
+                        <summary>
+                            <span class="title__details">ПИЦЦА ПОДОРОЖАЛА НА 50%!!!</span>
+                        </summary>
+                            <p class="content__news">Каким-то неизвестным способом пицца стала стоить в 2 раза больше!</p>
+                            <p class="content__news">В данный момент её цена 80 рублей</p>
+                            <p class="date__news">15.09.2024</p>
+                    </details>
+                </div>
             </section>
         </main>
         <footer class="footer">
@@ -80,12 +129,18 @@
                 <ul class="footers__link gray">
                     <li><a href="test_russian.html">Тест по русскому</a></li>
                     <li><a href="test_algebric.html">Тест по алгебре</a></li>
-                    <li><a href="text_english.html">Тест по английскому</a></li>
+                    <li><a href="test_english.html">Тест по английскому</a></li>
                 </ul>
                 <ul class="footers__link gray">
                     <li><a href="developers.html">Разработчикам</a></li>
                 </ul>
             </div>
         </footer>
+        <script src="editor/sceditor/sceditor.min.js"></script>
+        <script src="editor/sceditor/icons/monocons.min.js"></script>
+	    <script src="editor/sceditor/formats/xhtml.min.js"></script>
+		<script src="editor/sceditor/languages/ru.min.js"></script>
+        <script src="js/editor/scedior__init.js"></script>
+		<!-- <script src="'admin/js/src/sceditor_init.min.js',  "></script> -->
     </body>
 </html>

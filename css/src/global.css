@@ -1,12 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scrollbar-gutter: stable;
+}
 body {
+    display: grid;
+    grid-template-areas:
+                "header header"
+                ". main"
+                ". footer";
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
     margin: 0 auto;
     padding: 0;
     background-color: var(--color-white-10);
+    overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+    color: var(--color-white)
+}
 .header {
     background-color: var(--color-blue-60);
     width: 100vw;
+    grid-area: header;
 }
 
 .header .under__header {
@@ -15,6 +34,14 @@ body {
 }
 .header .under__header span {
     padding-left: calc(50% - 475px);
+}
+
+.header .under__header a {
+    transition: 0.3s;
+}
+.header .under__header a:hover {
+    transition: 0.3s;
+    color: var(--color-white-10)
 }
 .header .inner__header {
     display: flex;
@@ -50,6 +77,10 @@ body {
     font-size: 22px;
 }
 
+.main {
+    grid-area: main;
+}
+
 .main .catalog {
     margin: 0 auto;
     max-width: 660px;
@@ -63,6 +94,7 @@ body {
     position: relative;
     display: inline-block;
     border: solid 1px var(--color-blue-10);
+    cursor: pointer;
 }
 
 .dropdown-content {
@@ -73,16 +105,23 @@ body {
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    font-size: 14px;
+    color: var(--color-black);
+    font-weight: 500;
+    text-align: center;
     text-decoration: none;
     display: block;
+}
+
+.dropdown-content a.min {
+    font-size: 11.9px;
 }
 
 .dropdown:hover .dropdown-content {
     display: inline-block;
     cursor: pointer;
-    width: calc(100% - 1px);
+    width: 100%;
+    margin-left: -1px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border: solid 1px var(--color-blue-10);
@@ -90,7 +129,8 @@ body {
 }
 
 .dropdown:hover .title_catalog {
-    border-bottom: solid 1px var(--color-black); 
+    border-bottom: solid 1px var(--color-black);
+    margin-top: -1px;
 }
 
 .main .catalog .element_ctlg {
@@ -146,8 +186,7 @@ body {
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
+    grid-area: footer;
     background-color: var(--color-blue-60);
     width: 100vw;
 }
@@ -174,4 +213,10 @@ body {
 .footer .inner__footer .footers__link li a:hover { 
     color: var(--color-white-73);
     transition: 0.2s;
+}
+
+/* --------------- other --------------- */
+
+.hide {
+    display: none;
 }
